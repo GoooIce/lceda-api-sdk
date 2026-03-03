@@ -55,6 +55,9 @@ function fixUuid(uuid?: string): string {
  * 主逻辑方法
  */
 function main() {
+	// 确保输出目录存在
+	const distDir = path.join(__dirname, 'dist');
+	fs.ensureDirSync(distDir);
 	if (!testUuid(extensionConfig.uuid)) {
 		const newExtensionConfig = { ...extensionConfig };
 		// @ts-expect-error - Removing default property from extension config
