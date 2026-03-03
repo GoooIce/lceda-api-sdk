@@ -1,10 +1,9 @@
 #!/usr/bin/env bun
 import fs from 'fs-extra';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const rootDir = path.join(__dirname, '..');
+// 使用当前工作目录（bun create 时为项目根目录）
+const rootDir = process.cwd();
 
 /**
  * 生成 UUID（不带连字符）
