@@ -30,6 +30,6 @@
 		"typescript": "^5.7.3"
 	},
 	"bun-create": {
-		"postinstall": "echo '✅ pro-api-sdk 项目已创建！运行 bun run build 进行构建。'"
+		"postinstall": "bun ./scripts/setup.ts"
 	}
 }
